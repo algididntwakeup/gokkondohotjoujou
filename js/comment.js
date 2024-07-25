@@ -92,7 +92,7 @@ export const comment = (() => {
 
     const name = document.getElementById('form-name');
     if (name.value.length == 0) {
-      alert('Please fill name');
+      alert('Please fill in your name');
       return;
     }
 
@@ -124,7 +124,7 @@ export const comment = (() => {
         presence: presence ? presence.value === '1' : true,
         comment: form.value,
       })
-      .then();
+      .then((res) => res);
 
     form.disabled = false;
     if (cancel) {
