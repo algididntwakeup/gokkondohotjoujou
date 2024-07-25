@@ -1,4 +1,5 @@
 import { util } from './util.js';
+import { theme } from './theme.js';
 import { storage } from './storage.js';
 import { pagination } from './pagination.js';
 
