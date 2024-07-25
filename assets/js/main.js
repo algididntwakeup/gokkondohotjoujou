@@ -68,7 +68,7 @@ updateCountdown();
 
 // Copy Button 1
 document.getElementById('copyButton1').addEventListener('click', function () {
-  copyText('7480843848', 'copyStatus1');
+  copyText('1270004552194', 'copyStatus1');
 });
 
 function copyText(text, statusElementId) {
@@ -92,7 +92,7 @@ function copyText(text, statusElementId) {
 
 // Copy Button 2
 document.getElementById('copyButton2').addEventListener('click', function () {
-  copyText('2671751436', 'copyStatus2');
+  copyText('7480843848', 'copyStatus2');
 });
 
 function copyText(text, statusElementId) {

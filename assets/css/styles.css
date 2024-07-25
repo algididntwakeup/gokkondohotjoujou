@@ -148,6 +148,10 @@ h1.font-esthetic {
   font-family: Alice !important;
   font-size: 32px !important;
 }
+.gokkontitle {
+  font-family: Alice !important;
+  font-size: 18px !important;
+}
 
 /*=============== LAYOUT ===============*/
 #home {
@@ -631,6 +635,10 @@ h1.font-esthetic {
 .gokkon h3 {
   font-family: Alice !important;
   font-size: 2em !important;
+}
+.gokkon h4 {
+  font-family: Alice !important;
+  font-size: 1em !important;
 }
 .event__add p {
   font-size: 0.96em !important;
