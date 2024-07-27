@@ -91,12 +91,16 @@ export const comment = (() => {
     const id = button.getAttribute('data-uuid');
 
     const name = document.getElementById('form-name');
+    console.log('Name:', name.value); // Tambahkan log
+
     if (name.value.length == 0) {
       alert('Please fill in your name');
       return;
     }
 
     const presence = document.getElementById('form-presence');
+    console.log('Presence:', presence ? presence.value : 'Not found'); // Tambahkan log
+
     if (!id && presence && presence.value == '0') {
       alert('Please select presence');
       return;
@@ -107,6 +111,7 @@ export const comment = (() => {
     }
 
     const form = document.getElementById(`form-${id ? `inner-${id}` : 'comment'}`);
+    console.log('Comment:', form.value); // Tambahkan log
     form.disabled = true;
 
     const cancel = document.querySelector(`[onclick="comment.cancel('${id}')"]`);
