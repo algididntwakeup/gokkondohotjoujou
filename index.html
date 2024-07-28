@@ -458,7 +458,7 @@
 $(document).ready(function() {
     $(document).on('click', '.send_form', function() {
         var input_name_val = $("#wa_name").val().trim();
-        var input_select_val = $("#wa_select :selected").text();
+        var input_select_val = $("#wa_select :selected").text().replace(/ /g, "-");
         var input_textarea_val = $("#wa_textarea").val().trim();
 
         var walink = 'https://web.whatsapp.com/send';
@@ -468,17 +468,20 @@ $(document).ready(function() {
         var text_no = 'Isi semua Formulir lalu klik Kirim.';
 
         if (input_name_val !== "" && input_textarea_val !== "") {
-            var message = walink2 + '%0A%0A' +
-                '*Name* : ' + encodeURIComponent(input_name_val) + '%0A' +
-                '*Select Option* : ' + encodeURIComponent(input_select_val) + '%0A' +
-                '*Description* : ' + encodeURIComponent(input_textarea_val) + '%0A';
+            var message = walink2 + '\n\n' +
+                '*Nama* : ' + input_name_val + '\n' +
+                '*Kehadiran* : ' + input_select_val + '\n' +
+                '*Ucapan* : ' + input_textarea_val + '\n';
+
+            // Encode the message for URL
+            message = encodeURIComponent(message);
 
             // Smartphone support
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                 walink = 'whatsapp://send';
             }
 
-            var whatsapp_url = walink + '?phone=' + phone + '&text=' + encodeURIComponent(message);
+            var whatsapp_url = walink + '?phone=' + phone + '&text=' + message;
 
             // Open WhatsApp in a new tab
             window.open(whatsapp_url, '_blank');
@@ -491,6 +494,7 @@ $(document).ready(function() {
         }
     });
 });
+
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
