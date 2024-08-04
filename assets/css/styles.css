@@ -94,7 +94,7 @@ h1.font-esthetic {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5); /* Darker color with transparency */
+  background-color: rgba(204, 90, 14, 0.5); /* Darker color with transparency */
   border-radius: 50%; /* Optional: make them round */
   width: 50px; /* Optional: adjust size */
   height: 50px; /* Optional: adjust size */
