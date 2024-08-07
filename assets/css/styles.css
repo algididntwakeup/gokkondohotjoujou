@@ -86,6 +86,14 @@ h1.font-esthetic {
   margin-bottom: 1rem;
 }
 
+/* gambar gereja  */
+.church__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
 /* Carousel styles */
 .carousel-inner img {
   width: 100%;
@@ -150,7 +158,7 @@ h1.font-esthetic {
 }
 .gokkontitle {
   font-family: Alice !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
 }
 
 /* bootstrap converted */
